@@ -1,11 +1,4 @@
-text = "dc=produktion,dc=vorproduktion"
 
-text_split = text.split(",")
-
-print(text, text_split)
-
-for words in text_split:
-    print(words[3:])
 
 
 def cut_func(frontcut=int, backcut=int):
@@ -19,4 +12,4 @@ def cut_func(frontcut=int, backcut=int):
         print(words[frontcut:backcut_result])
 
 
-cut_func(3, 1)
+cut_func(0, 0)

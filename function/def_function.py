@@ -21,16 +21,11 @@ def search_string(str_search, record):
 
 def search_string_cut_test(str_search, record, frontcut=int, backcut=int):
     wert = search_string(str_search, record)
-
-    for werte in wert:
-        print("-----------------------------")
-        print(wert + " !GANZER STRING")
-
-        wert_split = wert.split(",")
-        for werte_ in wert_split:
-            werte_len = len(werte_) - backcut
-            print(werte_+ " !SCHLEIFEN WERT")
-            print(werte_[frontcut:werte_len] + " !CUTTET_STRING")
-            print("-----------------------------")
-            return werte_[frontcut:werte_len]       
+    wert_split = wert.split(",")
+    counter = 0
+    for werte_ in wert_split:
+        werte_len = len(werte_) - backcut
+        wert_split[counter] = werte_[frontcut:werte_len]
+        counter+=1
+    return ','.join(wert_split)
     
