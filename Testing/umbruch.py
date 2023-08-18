@@ -20,8 +20,6 @@ while count < 400: # Schleife von 1 bis 400 (Zeile für Zeile)
         print(count,liste[count+1].rstrip(), file=zwischenspeicher) # Zweite Zahle
         print("===================================================================", file=zwischenspeicher) # dummy
 
-        # test
-
         count=count+2 # Zähler (Überpsringt die Zusammengeführte Zeile)
     else: # Alle weiteren Zeilen die nicht 76 Zeichen lang sind sollen ausgegeben werden
         print(count,len_line,liste[count].rstrip().replace(" ", ""), file=zwischenspeicher) # Replace ersetzt leerstellen (indem die leerstellen entfernt werden)

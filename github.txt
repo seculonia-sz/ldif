@@ -1,0 +1,10 @@
+- Repository erstellen
+git init 
+
+- Commit erstellen
+git commit -m "Commit Message"
+
+- Projekt Pushen
+git -c http.sslVerify=false push --set-upstream origin <branch>
+- Bsp.
+git -c http.sslVerify=false push --set-upstream origin master
