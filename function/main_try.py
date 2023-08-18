@@ -47,7 +47,7 @@ for dn, record in par.parse():
     else: # Wenn ein neues ergebnis beginnt soll komma separiert werden
         zeile +=','
 
-    # ou 
+    # ou
     # hosts
     # subnets
     # vlans
