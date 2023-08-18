@@ -1,5 +1,5 @@
 from ldif import LDIFParser
-from function.def_function import *
+from def_function import *
 
 # Datei in der gelesen werden soll
 datei = "Auslesen.ldif"
