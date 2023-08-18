@@ -56,7 +56,7 @@ for dn, record in par.parse():
     zeile2=str()
     zeile2+= search_string('cn', record) + ","
     #zeile2+= search_string_cut('owner', record, 3, 1) + ","
-    zeile2+= search_string_cut_test('owner', record, 3, 0) + ","
+    zeile2+= search_string_cut('owner', record, 3, 0) + ","
     zeile2+= search_string('businessCategory', record)
     print(zeile2)
     # Die Zeile jeweils Komma separiert wird Ausgegeben, mit den einzelnen Werten aus der Datei

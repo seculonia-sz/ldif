@@ -19,7 +19,7 @@ def search_string(str_search, record):
 #    return wert[frontcut:backcut_result]
 
 
-def search_string_cut_test(str_search, record, frontcut=int, backcut=int):
+def search_string_cut(str_search, record, frontcut=int, backcut=int):
     wert = search_string(str_search, record)
     wert_split = wert.split(",")
     counter = 0
