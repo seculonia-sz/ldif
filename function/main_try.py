@@ -47,19 +47,22 @@ for dn, record in par.parse():
     else: # Wenn ein neues ergebnis beginnt soll komma separiert werden
         zeile +=','
 
+    # Erstellen der Zeilen (als String)
+    zeile2=str()
+
+    zeile2+= search_string('cn', record) + ","
+    zeile2+= search_string_cut('owner', record, 3, 0) + ","
+    zeile2+= search_string('businessCategory', record) + ","
+    zeile2+= search_string('dn', record)
+    print(zeile2)
+    # Die Zeile jeweils Komma separiert wird Ausgegeben, mit den einzelnen Werten aus der Datei
+    #print(zeile)
+
+    
     # ou
     # hosts
     # subnets
     # vlans
     # dhcp-pools
-
-    zeile2=str()
-    zeile2+= search_string('cn', record) + ","
-    #zeile2+= search_string_cut('owner', record, 3, 1) + ","
-    zeile2+= search_string_cut('owner', record, 3, 0) + ","
-    zeile2+= search_string('businessCategory', record)
-    print(zeile2)
-    # Die Zeile jeweils Komma separiert wird Ausgegeben, mit den einzelnen Werten aus der Datei
-    #print(zeile)
 
 print ("--------------------------------------")

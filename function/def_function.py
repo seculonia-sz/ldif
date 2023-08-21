@@ -12,13 +12,7 @@ def search_string(str_search, record):
     else:
         return ','
 
-#def search_string_cut(str_search, record, frontcut=int, backcut=int):
-#    wert = search_string(str_search, record)
-#   wert_len = len(wert)
-#backcut_result = wert_len - backcut
-#    return wert[frontcut:backcut_result]
-
-
+# Suche nach einem String, schneidet vorne und/oder hinten Zeichen ab
 def search_string_cut(str_search, record, frontcut=int, backcut=int):
     wert = search_string(str_search, record)
     wert_split = wert.split(",")
@@ -28,4 +22,11 @@ def search_string_cut(str_search, record, frontcut=int, backcut=int):
         wert_split[counter] = werte_[frontcut:werte_len]
         counter+=1
     return ','.join(wert_split)
+
+# ALTE funktion: Suche nach einem String, schneidet vorne und/oder hinten Zeichen ab
+#def search_string_cut(str_search, record, frontcut=int, backcut=int):
+#    wert = search_string(str_search, record)
+#   wert_len = len(wert)
+#backcut_result = wert_len - backcut
+#    return wert[frontcut:backcut_result]
     
