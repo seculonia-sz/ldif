@@ -9,7 +9,6 @@ par= LDIFParser(open(datei, "rb"))
 
 # -------------------- VERBESSERUNG --------------------
 # - Die If bedingungen in eine Funktion umwandeln
-# - doppelte, dreifache kommas entfernen
 # - als csv datei speichern (spalten: überschriften darunter liegend die werte)
 # - Weitere Werte abfragen bswp. objectClass, description, devktag, .........
 
@@ -53,16 +52,21 @@ for dn, record in par.parse():
     zeile2+= search_string('cn', record) + ","
     zeile2+= search_string_cut('owner', record, 3, 0) + ","
     zeile2+= search_string('businessCategory', record) + ","
-    zeile2+= search_string('dn', record)
+    zeile2+= search_string('ou', record)
     print(zeile2)
     # Die Zeile jeweils Komma separiert wird Ausgegeben, mit den einzelnen Werten aus der Datei
     #print(zeile)
 
-    
     # ou
     # hosts
     # subnets
     # vlans
     # dhcp-pools
+
+
+    # Als CSV Datei Speichern
+    csv_file = open("function/inhalt.csv", "a")
+    csv_file.write(zeile2 + "\n")
+    csv_file.close()
 
 print ("--------------------------------------")
