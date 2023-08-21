@@ -1,2 +1,3 @@
 # ignore ALL .ldif files
 *.ldif
+*.csv
