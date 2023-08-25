@@ -26,6 +26,7 @@ for dn, record in par.parse():
     if 'ou' in dn:
         print('ou' in dn)
     # PULL
+    # PULL2
 
     zeile+= search_string('cn', record) + ","
     zeile+= search_string_cut('owner', record, 3, 0) + ","
