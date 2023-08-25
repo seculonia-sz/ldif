@@ -1,4 +1,4 @@
-# ignore ALL .ldif files
+# ignore ALL .ldif, csv, txt files
 *.ldif
 *.csv
 *.txt
