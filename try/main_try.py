@@ -27,6 +27,8 @@ for dn, record in par.parse():
         print('ou' in dn)
     # PULL
     # PULL2
+    #ewueruthaerpuhertqhtiru9
+    # BANANEN
 
     zeile+= search_string('cn', record) + ","
     zeile+= search_string_cut('owner', record, 3, 0) + ","
